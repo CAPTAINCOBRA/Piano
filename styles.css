@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #143f68;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(121deg, #ff0000 0%, #ff0000 100%),
+    linear-gradient(140deg, #ff5454 27%, #223dcb 100%),
+    linear-gradient(140deg, #4e9c51 0%, #001aff 72%),
+    linear-gradient(64deg, #6e00ff 0%, #0038ff 100%),
+    radial-gradient(52% 101.79% at 50% 50%, #707300 0%, #ff0000 100%),
+    radial-gradient(100% 100% at 70% 0%, #7a3b00 0%, #1dac92 100%);
+  background-blend-mode: overlay, overlay, difference, difference, color-burn,
+    exclusion; */
+
+  /* background: radial-gradient(100% 225% at 0% 0%, #de3e3e 0%, #17115c 100%),
+    radial-gradient(100% 225% at 100% 0%, #ff9040 0%, #ff0000 100%),
+    linear-gradient(180deg, #ce63b7 0%, #ed6283 100%),
+    radial-gradient(100% 120% at 75% 0%, #a74600 0%, #000000 100%),
+    linear-gradient(310deg, #0063d8 0%, #16009a 50%);
+  background-blend-mode: overlay, color-dodge, color-burn, color-dodge, normal; */
+  background-image: url(night.jpg);
+}
+
+.piano {
+  display: flex; /*Now all our piano keys will line up side by side instea of on top of each other*/
+}
+
+.key {
+  height: calc(var(--width) * 4);
+  width: var(--width);
+}
+
+.white {
+  --width: 100px;
+  /* height: 400px; */
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white:active {
+  background-color: #ccc;
+}
+
+.black {
+  --width: 60px;
+  /* height: 240px; */
+  background-color: black;
+  border: 1px solid #333;
+  /* margin-left: -30px; */
+  margin-left: calc(var(--width) / -2);
+  margin-right: calc(var(--width) / -2);
+  z-index: 2;
+}
+
+.black:active {
+  background-color: #333;
+}
